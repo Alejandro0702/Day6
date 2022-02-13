@@ -10,15 +10,15 @@ fs.readFile('input.txt', 'utf-8', (err, txt) => {
   }
 });
 function CountQuestions(grupos){
-    var suma = 0;
-    for (var k = 0; k < grupos.length; k++){
-        var aRgrupo = grupos[k].split('');
-        var temp = new Array();
-        var j = 0;
-        for (var i = 0; i < grupos[k].length; i++)
+    let sum = 0;
+    for (let k = 0; k < grupos.length; k++){
+        let aRgrupo = grupos[k].split('');
+        let temp = new Array();
+        let j = 0;
+        for (let i = 0; i < grupos[k].length; i++)
             if(temp.find(elemento => elemento == aRgrupo[i]) == null)
                 temp[j++] = aRgrupo[i];
-        suma = suma + temp.length;
+        sum +=  temp.length;
     }
-    return suma;
+    return sum;
 }
